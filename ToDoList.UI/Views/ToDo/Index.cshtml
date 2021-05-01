@@ -3,13 +3,14 @@
 }
 
 <div id="todo" v-cloak>
-    <div  v-cloak v-if="errorMessage != ''">
-        <p style="color:red;font-size:15px;"><strong>{{errorMessage}}</strong></p>
-    </div>
+
     <div class="row">
         @Html.Partial("~/Views/ToDo/Partial/_AddToDo.cshtml")
         @Html.Partial("~/Views/ToDo/Partial/_UpdateToDo.cshtml")
 
+    </div>
+    <div v-cloak v-if="errorMessage != ''">
+        <p style="color:red;font-size:15px;"><strong>{{errorMessage}}</strong></p>
     </div>
     <hr />
     <div>
