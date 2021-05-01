@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+<h3>To Do List</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Time To Do</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr v-for="(row,index) in getToDoListInfoData">
+            <td>
+                {{row.Id}}
+            </td>
+            <td>
+                {{row.Name}}
+            </td>
+            <td>
+                {{row.Description}}
+            </td>
+            <td>
+                {{row.TimeToDo | formatDate }}
+            </td>
+            <td>
+                <button type="button" @@click="deleteToDo(row)" class="btn btn-primary">Delete</button>
+                <button type="button" @@click="update(row)" class="btn btn-primary">Update</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

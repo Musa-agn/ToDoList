@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "To Do List ";
+}
+
+<div id="todo" v-cloak>
+    <div  v-cloak v-if="errorMessage != ''">
+        <p style="color:red;font-size:15px;"><strong>{{errorMessage}}</strong></p>
+    </div>
+    <div class="row">
+        @Html.Partial("~/Views/ToDo/Partial/_AddToDo.cshtml")
+        @Html.Partial("~/Views/ToDo/Partial/_UpdateToDo.cshtml")
+
+    </div>
+    <hr />
+    <div>
+        <span style="float: left;">Search By Id: </span>
+        <input type="text" class="form-control" v-model="getToDoId" style="width:200px;float:left;">
+        <button type="button" style="float: left;" @@click="getToDo" :disabled="!getToDoListInfoData.length > 0" class="btn btn-primary">Search</button>
+        &nbsp;&nbsp;
+        <button type="button" style="float: left; margin-left:10px;" :disabled="!getToDoListInfoData.length > 0" @@click="getToDoList" class="btn btn-primary">Bring All</button>
+        <br />
+    </div>
+    @Html.Partial("~/Views/ToDo/Partial/_ToDoModal.cshtml")
+
+    <hr />
+    <hr />
+    @Html.Partial("~/Views/ToDo/Partial/_ToDoList.cshtml")
+
+    @Scripts.Render("~/bundles/todovue")
+</div>
+
+
