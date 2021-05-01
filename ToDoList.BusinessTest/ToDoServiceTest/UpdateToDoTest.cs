@@ -20,12 +20,7 @@ namespace ToDoList.BusinessTest.ToDoServiceTest
             mockToDoRepository = new Mock<IToDoRepository>();
             toDoService = new ToDoService(mockToDoRepository.Object);
         }
-        [Test]
-        public void When_Id_IsEmpty()
-        {
-            UpdateToDoInput updateToDoInput = new UpdateToDoInput();
-            Assert.Throws<ValidationException>(() => toDoService.UpdateToDo(updateToDoInput));
-        }
+
         [Test]
         public void When_ToDo_NotFound()
         {
