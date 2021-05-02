@@ -4,7 +4,7 @@ Bu proje ile; yapılacak işlemleri ekleyebilirsiniz, eklemiş olduğunuz itemla
 güncelleyebilirsiniz, id ye göre ilgili itemı getirebilirsiniz ve tüm yapılacak listesini çekebilirsiniz.
 
 **Run Edilmesi Gereken Projeler:** <br>
-ToDoList.API
+ToDoList.API <br>
 ToDoListUI/ToDoList.UI
 
 **Solutionumun üzerindeki projeler:** <br>
