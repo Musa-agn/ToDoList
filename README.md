@@ -7,6 +7,9 @@ güncelleyebilirsiniz, id ye göre ilgili itemı getirebilirsiniz ve tüm yapıl
 ToDoList.API <br>
 ToDoListUI/ToDoList.UI
 
+**Kullanılan Veritabanı:**
+SQLite kullanıldı.
+
 **Solutionumun üzerindeki projeler:** <br>
 ToDoListUI/ToDoList.UI  <br>
 Test/ToDoList.BusinessTest  <br>
